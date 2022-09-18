@@ -1,0 +1,22 @@
+.countris {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 300px;
+}
+
+
+
+.country img {
+    height: 150px;
+    width: 300px;
+    padding-left: 30px;
+}
+
+.country {
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    padding: 10px;
+    line-height: normal;
+
+}
