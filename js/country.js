@@ -16,20 +16,41 @@ const displayCountries = countries => {
 
 
 }
-const getCountryHTML = country => {
+
+// Option -2:
+const getCountryHTML = ({ flags, name, capital, area, population, region }) => {
     return `
-
 <div class="country">
-
-<img src="${country.flags.png}">
-<h1>Name: ${country.name.common} </h1>
-<p>Capital:  ${country.capital} </p>
-
-
-</div>
-
-`
-
+<img src="${flags.png}">
+<h1>Name: ${name.common} </h1>
+<p>Capital:  ${capital} </p>
+<p>Area:  ${area} </p>
+<p>Population:  ${population} </p>
+<p>Region:  ${region} </p>
+</div>`
 }
+
+
+
+// // Option -1:
+// const getCountryHTML = country => {
+//     const { flags, name, capital } = country
+//     return `
+// <div class="country">
+// <img src="${flags.png}">
+// <h1>Name: ${name.common} </h1>
+// <p>Capital:  ${capital} </p>
+// </div>`
+// }
+
+//  Orginal step :
+// const getCountryHTML = country => {
+//     return `
+// <div class="country">
+// <img src="${country.flags.png}">
+// <h1>Name: ${country.name.common} </h1>
+// <p>Capital:  ${country.capital} </p>
+// </div>`
+// }
 
 loadCountry()
